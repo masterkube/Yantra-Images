@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ApprovedInteractions>
+    <CustomerId>DevelopmentUser</CustomerId>
+    <InstallationType>PROD</InstallationType>
+    <NumberOfApprovedInteractions>1000000000</NumberOfApprovedInteractions>
+    <ExpiryDate>30/12/2060</ExpiryDate>
+    <CreatedDate>08/03/2013</CreatedDate>
+</ApprovedInteractions>
