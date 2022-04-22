@@ -1,3 +1,4 @@
+# script to setup the container for the axon
 docker login
 docker network create axon-net
 docker run -d --net axon-net --name mysqldoc masterkube/axonmysql:3.0
