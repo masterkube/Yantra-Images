@@ -1,3 +1,4 @@
+#to load a sql file to db cmd: loaddatabase.sh mydata.sql
 git clone https://github.com/masterkube/Dump-Files.git
 if [ $? -eq 0 ]
 then
