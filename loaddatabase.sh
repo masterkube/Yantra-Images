@@ -4,9 +4,9 @@ git pull
 #to get internal ip of the mysql container
 mysqlip=$(docker inspect mysqldoc --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}')
 apt install mysql-client
-docker exec mysqldoc bash -c "mysql -uroot -proot -h$mysqlip -e 'create database masterkubedb;'"
-docker exec mysqldoc bash -c "mysql -uroot -proot -h$mysqlip -e 'drop database masterkubedb;'"
-docker exec mysqldoc bash -c "mysql -uroot -proot -h$mysqlip </$1"
+mysql -uroot -proot -h$mysqlip -e "create database masterkubedb;"
+mysql -uroot -proot -h$mysqlip -e "drop database masterkubedb; source $1;"
+
 
 
 docker exec axon3 bash -c "
