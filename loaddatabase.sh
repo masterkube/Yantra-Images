@@ -5,7 +5,7 @@ git pull
 mysqlip=$(docker inspect mysqldoc --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}')
 apt install mysql-client
 mysql -uroot -proot -h$mysqlip -e "create database masterkubedb;"
-mysql -uroot -proot -h$mysqlip -e "drop database masterkubedb; source $1;"
+mysql -uroot -proot -h$mysqlip -e "drop database masterkubedb; create database masterkubedb; use masterkubedb; source $1;"
 
 
 
