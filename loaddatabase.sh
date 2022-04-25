@@ -1,14 +1,14 @@
 #to load a sql file to db cmd: loaddatabase.sh mydata.sql
-git clone https://github.com/masterkube/Dump-Files.git
-if [ $? -eq 0 ]
-then
-echo "Repo cloned ..."
-cd Dump-Files
-else
-echo "Using existing Repo ..."
-cd Dump-Files
+#git clone https://github.com/masterkube/Dump-Files.git
+#if [ $? -eq 0 ]
+#then
+#echo "Repo cloned ..."
+#cd Dump-Files
+#else
+#echo "Using existing Repo ..."
+#cd Dump-Files
 git pull
-fi
+#fi
 
 mysqlip=$(docker inspect mysqldoc --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}')
 apt install mysql-client
@@ -18,7 +18,7 @@ create database masterkubedb;
 source $1;
 exit
 
-cd ..
+#cd ..
 
 docker exec -it axon3 bash
 rm webapps/Axon/WEB-INF/classes/ActualDetails.properties
