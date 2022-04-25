@@ -5,7 +5,8 @@ git pull
 mysqlip=$(docker inspect mysqldoc --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}')
 apt install mysql-client
 docker exec mysqldoc bash -c "mysql -uroot -proot -h$mysqlip -e 'create database masterkubedb;'"
-docker exec mysqldoc bash -c "mysql -uroot -proot -h$mysqlip -e 'drop database masterkubedb; create database masterkubedb; source $1;'"
+docker exec mysqldoc bash -c "mysql -uroot -proot -h$mysqlip -e 'drop database masterkubedb;'"
+docker exec mysqldoc bash -c "mysql -uroot -proot -h$mysqlip </$1"
 
 
 docker exec axon3 bash -c "
