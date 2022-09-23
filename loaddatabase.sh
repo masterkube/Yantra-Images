@@ -6,8 +6,8 @@ mysqlip=$(docker inspect mysqldoc --format='{{range .NetworkSettings.Networks}}{
 apt install mysql-client
 mysql -uroot -proot -h$mysqlip -e "create database masterkubedb;"
 mysql -uroot -proot -h$mysqlip -e "drop database masterkubedb; create database masterkubedb; use masterkubedb; source $1;"
-mysql -uroot -proot -h$mysqlip -e "create database maste114_axondb;"
-mysql -uroot -proot -h$mysqlip -e "drop database maste114_axondb; create database maste114_axondb; use maste114_axondb; source maste114_axondb.sql;"
+#mysql -uroot -proot -h$mysqlip -e "create database maste114_axondb;"
+#mysql -uroot -proot -h$mysqlip -e "drop database maste114_axondb; create database maste114_axondb; use maste114_axondb; source maste114_axondb.sql;"
 
 
 
